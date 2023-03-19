@@ -56,8 +56,6 @@ function Lib:CreateWindow()
 	-- Scripts
 
 	local function MBCIW_fake_script() -- ImageButton.LocalScript 
-		local script = Instance.new('LocalScript', ImageButton)
-
 		script.Parent.MouseButton1Down:Connect(function()
 			script.Parent.Parent.Parent:Destroy()
 		end)
