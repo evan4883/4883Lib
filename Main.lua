@@ -1,11 +1,11 @@
 Lib = {}
 function Lib:CreateWindow()
 	local NH7tnujhd7TG = Instance.new("ScreenGui")
-	local Frame = Instance.new("Frame")
+	Frame = Instance.new("Frame")
 	local TopBar = Instance.new("Frame")
 	local TextLabel = Instance.new("TextLabel")
-	local ImageButton = Instance.new("ImageButton")
-	local Buttons = Instance.new("Frame")
+	ImageButton = Instance.new("ImageButton")
+	Buttons = Instance.new("Frame")
 	local UIGridLayout = Instance.new("UIGridLayout")
 	
 	NH7tnujhd7TG.Name = "NH7tnujhd7TG"
@@ -55,9 +55,9 @@ function Lib:CreateWindow()
 
 	-- Scripts
 
-	local function MBCIW_fake_script() -- ImageButton.LocalScript 
-		script.Parent.MouseButton1Down:Connect(function()
-			script.Parent.Parent.Parent:Destroy()
+	local function MBCIW_fake_script()
+		ImageButton.MouseButton1Down:Connect(function()
+			Frame:Destroy()
 		end)
 	end
 	coroutine.wrap(MBCIW_fake_script)()
@@ -75,8 +75,6 @@ function window:CreateButton(Text)
 	TextButton.TextSize = 14
 	TextButton.Text = Text
 end
-
-
 
 
 
